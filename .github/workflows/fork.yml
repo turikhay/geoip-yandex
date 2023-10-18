@@ -1,0 +1,19 @@
+name: Sync Fork
+
+on:
+  schedule:
+    - cron: "35 5 2 * *"
+  workflow_dispatch:
+
+jobs:
+  sync:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: tgymnich/fork-sync@v1.8
+        with:
+          owner: Loyalsoldier
+          repo: geoip
+          base: master
+          head: master
