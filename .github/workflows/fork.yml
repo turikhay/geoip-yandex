@@ -17,3 +17,5 @@ jobs:
           repo: geoip
           base: master
           head: master
+          retries: 1
+          ignore_fail: true
