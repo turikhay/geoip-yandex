@@ -87,6 +87,26 @@
       "args": {
         "outputName": "geoip.dat"
       }
+    },
+    {
+      "type": "maxmindMMDB",
+      "action": "output",
+      "args": {
+        "outputName": "Country.mmdb",
+        "overwriteList": [
+          "cn",
+          "private",
+          "cloudflare",
+          "cloudfront",
+          "facebook",
+          "fastly",
+          "google",
+          "netflix",
+          "telegram",
+          "twitter",
+          "yandex"
+        ]
+      }
     }
   ]
 }
