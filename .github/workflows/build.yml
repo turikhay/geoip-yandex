@@ -65,6 +65,13 @@ jobs:
             sha256sum ${name} > ./${name}.sha256sum
           done
 
+      - name: Generate sha256 checksum for mmdb files
+        run: |
+          cd ./output/maxmind || exit 1
+          for name in $(ls *.mmdb); do
+            sha256sum ${name} > ./${name}.sha256sum
+          done
+
       - name: Move files to publish directory
         run: |
           mkdir -p publish
