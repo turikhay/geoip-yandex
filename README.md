@@ -21,11 +21,36 @@
 }
 ```
 
+## sing-box example
+
+```json
+{
+  "rule_set": [
+    { 
+      "tag": "geoip-yandex",
+      "type": "remote",
+      "format": "binary",
+      "url": "https://raw.githubusercontent.com/turikhay/geoip-yandex/release/srs/yandex.srs"
+    }
+  ],
+  "rules": [
+    { 
+      "rule_set": "geoip-yandex",
+      "outbound": "direct"
+    }
+  ]
+}
+```
+
 ## Download
 
 Use this permanent link:
 
 `https://raw.githubusercontent.com/turikhay/geoip-yandex/release/geoip.dat`
+
+For sing-box:
+
+`https://raw.githubusercontent.com/turikhay/geoip-yandex/release/srs/yandex.srs`
 
 ## License
 
